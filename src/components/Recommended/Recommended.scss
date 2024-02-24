@@ -1,0 +1,19 @@
+.recommended {
+    margin-top: 132px;
+
+
+    &_title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 65px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__container {
+        margin-top: 72px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}

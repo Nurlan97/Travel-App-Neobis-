@@ -1,8 +1,62 @@
-body {
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Satoshi Regular"),
+        local("Satoshi-Regular"),
+        url("./fonts/Satoshi-Regular.woff2") format('woff2'),
+        url("./fonts/Satoshi-Regular.woff") format('woff'),
+        url("./fonts/Satoshi-Regular.eot") format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Satoshi Medium"),
+        local("Satoshi-Medium"),
+        url("./fonts/Satoshi-Medium.woff2") format('woff2'),
+        url("./fonts/Satoshi-Medium.woff") format('woff'),
+        url("./fonts/Satoshi-Medium.eot") format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Satoshi Bold"),
+        local("Satoshi-Bold"),
+        url("./fonts/Satoshi-Bold.woff2") format('woff2'),
+        url("./fonts/Satoshi-Bold.woff") format('woff'),
+        url("./fonts/Satoshi-Bold.eot") format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("SF ProDisplay Regular"),
+        local("SFProDisplay-Regular"),
+        url("./fonts/SFProDisplay-Regular.woff2") format('woff2'),
+        url("./fonts/SFProDisplay-Regular.woff") format('woff'),
+        url("./fonts/SFProDisplay-Regular.eot") format('eot');
+  font-display: swap;
+}
+
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Satoshi";
+}
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +64,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }

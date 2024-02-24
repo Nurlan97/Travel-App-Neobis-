@@ -1,0 +1,100 @@
+.discover {
+    margin-top: 150px;
+
+    &__title_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .discover__title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 65px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        .discover__slider_button_container {
+            display: flex;
+            gap: 20px;
+
+            &>img {
+                border-radius: 50%;
+                padding: 28px;
+                border: 1px solid rgb(136, 136, 136);
+            }
+        }
+
+    }
+
+    &__navbar {
+        margin-top: 40px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 63px;
+
+        // .discover__item {
+        //     &>a {
+        //         font-family: "SFProDisplay-Regular";
+        //         font-size: 24px;
+        //         font-weight: 400;
+        //         line-height: 29px;
+        //         letter-spacing: 0%;
+        //         text-align: left;
+        //         color: rgb(20, 20, 20);
+        //         transition: transform 0.5s;
+
+
+        //     }
+
+        //     &.active>a {
+        //         color: rgb(106, 98, 183);
+        //         font-family: "SF Pro Display", sans-serif;
+        //         font-size: 24px;
+        //         font-weight: 700;
+        //         line-height: 29px;
+        //         letter-spacing: 0%;
+        //         text-align: left;
+        //         transform: scale(1.1);
+        //     }
+        // }
+        
+        .discover__item a {
+            font-family: "SFProDisplay-Regular";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: rgb(20, 20, 20);
+            transition: transform 0.3s;
+            display: inline-block; /* Добавляем display: inline-block */
+            
+        }
+        
+        .discover__item.active a {
+            color: rgb(106, 98, 183);
+            font-family: "SF Pro Display", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+            transform: scale(1.1);
+            position: relative;
+
+            // &::after{
+            //     content: '',
+
+            // } 
+        }
+    }
+
+}
+
+.tourCard_container {
+    margin-top: 82px;
+}
+
