@@ -1,7 +1,9 @@
 import React from 'react'
+import './TourDetails.scss'
 import mapMarker from '../../images/TourDetailsPage/u_map-marker.svg'
 import user1 from '../../images/TourDetailsPage/user1.jpeg'
-import user2 from '../../images/TourDetailsPage/user2.jpeg'
+import user2 from '../../images/TourDetailsPage/user2.webp'
+import bg_img from '../../images/TourDetailsPage/tourDetailsPage_main-img.png'
 
 const TourDetails = () => {
     // const user = ['Asan', 'Ainura'];
@@ -21,11 +23,19 @@ const TourDetails = () => {
         }
     ]
     return (
-        <div>
-            <div className="tourDetails__img-container">
-                <img src="" alt="" className="tourDetails__img" />
+        <div className='tourDetails'>
+            {/* <div className="tourDetails__img-container">
+                <img src={bg_img} alt="" className="tourDetails__img" />
+            </div> */}
+            <div 
+            className="tourDetails__img" 
+            style={{backgroundImage: `url(${bg_img})`}}
+            >
+              Nurlan
             </div>
+
             <div className="tourDetails__info_container">
+            
                 <div className="container">
                     <h1 className="tourDetails__title">
                         Mount Fuji
@@ -47,20 +57,25 @@ const TourDetails = () => {
                             Reviews
                         </h2>
                         <div className="tourDetails__reviews_comments-container">
-                            {users.map((user, index) => {
-                                <div className="tourDetails__reviews_comment">
-                                    <img src={user.userImg} alt="" className="tourDetails__reviews_comment_userImg" />
-                                    <p className="tourDetails__reviews_comment_userName">
-                                        {user}
-                                    </p>
+                            {users.map((user, index) => (
+                                <>
+                                    <div className="tourDetails__reviews_comment" key={index}>
+                                        {/* {console.log(user)} */}
+                                        <img src={user.userImg} alt="logo" className="tourDetails__reviews_comment_userImg" />
+                                        <p className="tourDetails__reviews_comment_userName">
+                                            {user.userName}
+                                        </p>
+                                    </div>
                                     <div className="tourDetails__reviews_comment_userComment">
                                         {user.userComment}
                                     </div>
-                                </div>
-                            })}
+                                </>
+                            ))}
                         </div>
 
                     </div>
+
+                    <button className='tourDetails__button'>Book now</button>
 
                 </div>
 

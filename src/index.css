@@ -36,6 +36,18 @@
 }
 
 @font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-style: normal;
+  src: local("Satoshi Black"),
+        local("Satoshi-Black"),
+        url("./fonts/Satoshi-Black.woff2") format('woff2'),
+        url("./fonts/Satoshi-Black.woff") format('woff'),
+        url("./fonts/Satoshi-Black.eot") format('eot');
+  font-display: swap;
+}
+
+@font-face {
   font-family: "SFProDisplay-Regular";
   font-weight: 400;
   font-style: normal;
@@ -55,15 +67,6 @@
   text-decoration: none;
   list-style: none;
   font-family: "Satoshi";
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .container {

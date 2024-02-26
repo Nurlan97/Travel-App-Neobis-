@@ -1,0 +1,129 @@
+.tourDetails {
+    &__img_container {
+        position: relative;
+
+    }
+
+    &__img {
+        // width: 100%;
+        height: 500px;
+        background-repeat: no-repeat;
+        
+    }
+
+    // &__overlay{
+    //     position: absolute;
+    //     height: 40px;
+    //     width: 100%;
+    //     border-top-left-radius: 45px;
+    //     border-top-right-radius: 45px;
+    //     background: white;
+    // }
+
+    &__info_container {
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+        position: absolute;
+        bottom: 140px;
+        background: white;
+        width: 100%;
+        padding-top: 56px;
+        padding-top: 16px;
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 86px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__location__info {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        align-items: center;
+    }
+
+
+    // &__map-marker{
+    //     margin-top: 16px;
+    // }
+
+    &__location {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__description {
+        margin-top: 48px;
+
+        &_text{
+            margin-top: 16px;
+        }
+    }
+
+    &__description_title,
+    &__reviews_title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__description_text,
+    &__reviews_comments-container {
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 142.3%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__reviews {
+        margin-top: 40px;
+
+        &_comment {
+            display: flex;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        &_comment_userImg {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+
+        &_comment_userComment {
+            margin-top: 16px;
+        }
+
+    }
+
+    &__button {
+        width: 100%;
+        padding: 16px 0;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: center;
+        background: rgb(106, 98, 183);
+        border:none;
+        border-radius: 100px;
+        color: #ffffff;
+        margin: 160px 0;
+        cursor: pointer;
+    }
+
+
+}

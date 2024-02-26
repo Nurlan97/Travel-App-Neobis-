@@ -10,6 +10,7 @@ import './TourCard.scss'
 
 
 
+
 const TourCard = () => {
     const settings = {
         dots: false,
@@ -28,7 +29,7 @@ const TourCard = () => {
       };
 
     const items = [
-        // <Link key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
+        <Link to='/tourDetailsPage' key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
         <div key="2"><img src={tourCardImg2} alt="Tour Image 2" /></div>,
         <div key="2"><img src={tourCardImg3} alt="Tour Image 2" /></div>,
         <div key="1"><img src={tourCardImg} alt="Tour Image 1" /></div>,
