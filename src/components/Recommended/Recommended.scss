@@ -16,4 +16,21 @@
         flex-wrap: wrap;
         
     }
+
+    &__tours{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 72px;
+    }
+
+    &__tour-container{
+        border-radius: 5px;
+    }
+
+    &__tour {
+        width: 282px;
+        height: 282px;
+        border-radius: 14px;
+    }
 }

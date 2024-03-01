@@ -3,6 +3,7 @@ import './Discover.scss'
 import slider_left_btn from '../../images/discover/arrow__left.png'
 import slider_right_btn from '../../images/discover/arrow__right.png'
 import TourCard from '../TourCard'
+import { Link } from 'react-router-dom'
 
 const Discover = () => {
     const [activeNavItem, setActiveNavItem] = useState(0);
@@ -38,7 +39,7 @@ const Discover = () => {
                                     className={`discover__item ${activeNavItem === index ? 'active': ""}`}
                                     onClick={() => handleNavItemClick(index)}
                                 >
-                                    <a href="#">{item}</a>
+                                    <Link to="#">{item}</Link>
                                 </li>
                             ))
                         }

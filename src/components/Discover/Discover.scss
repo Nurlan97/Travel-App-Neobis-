@@ -35,34 +35,11 @@
         display: flex;
         gap: 63px;
 
-        // .discover__item {
-        //     &>a {
-        //         font-family: "SFProDisplay-Regular";
-        //         font-size: 24px;
-        //         font-weight: 400;
-        //         line-height: 29px;
-        //         letter-spacing: 0%;
-        //         text-align: left;
-        //         color: rgb(20, 20, 20);
-        //         transition: transform 0.5s;
-
-
-        //     }
-
-        //     &.active>a {
-        //         color: rgb(106, 98, 183);
-        //         font-family: "SF Pro Display", sans-serif;
-        //         font-size: 24px;
-        //         font-weight: 700;
-        //         line-height: 29px;
-        //         letter-spacing: 0%;
-        //         text-align: left;
-        //         transform: scale(1.1);
-        //     }
-        // }
         
+      
         .discover__item a {
             font-family: "SFProDisplay-Regular";
+            // font-family: "SF Pro Display", sans-serif;
             font-size: 24px;
             font-weight: 400;
             line-height: 29px;
@@ -76,19 +53,29 @@
         
         .discover__item.active a {
             color: rgb(106, 98, 183);
-            font-family: "SF Pro Display", sans-serif;
+            // font-family: "SF Pro Display", sans-serif;
+            font-family: "SFProDisplay-Regular";
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 500;
             line-height: 29px;
             letter-spacing: 0%;
             text-align: left;
             transform: scale(1.1);
             position: relative;
 
-            // &::after{
-            //     content: '',
+            &::after{
+                content: '';
+                width: 8px;
+                height: 8px;
+                background:  rgb(106, 98, 183);
+                position: absolute;
+                border-radius: 50%;
+                top: 40px;
+                left: 50%;
+                transform: translate(-50%);
 
-            // } 
+
+            } 
         }
     }
 

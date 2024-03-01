@@ -2,8 +2,23 @@ import React from 'react'
 import mainImage from '../../images/about/main.png';
 import button from '../../images/about/about_button.png';
 import './About.scss';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const About = () => {
+
+    const handleBtn = () => {
+        console.log(window.scroll(0, 500))
+    } 
+
+    // const dispatch = useDispatch() 
+
+    // const [state, setState] = useState('popular')
+
+    // useEffect(() => {
+    //     dispatch(getTours(state))
+    // }, [state])
+    
+    
     return (
         <div className='about'>
             <div className="container">
@@ -17,10 +32,16 @@ const About = () => {
                             <br />
                             Enjoy the best experience with us!
                         </p>
-                        <a href="#" className='about__button_container'>
-                            <img src={button} alt="Button" className="about__button" />
+                        <div className='about__button_container'
+                        onClick={handleBtn}
+                        >
+                            {/* <img src={button} alt="Button" className="about__button" /> */}
+                            <p className='about__button'>
+                                Let's start
+                            </p>
+                            <div className='about__button_arrow'><HiOutlineArrowNarrowRight /></div>
 
-                        </a>
+                        </div>
                         {/* <a href="#" className="about__button">Let’s Go!</a> */}
                     </div>
                     <div className="about__img_container">
