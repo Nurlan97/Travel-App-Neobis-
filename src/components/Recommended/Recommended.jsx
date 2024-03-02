@@ -18,7 +18,7 @@ const Recommended = () => {
                 // const response = await axios.get(`https://muha-backender.org.kg/tours/recommended/`)
                 if (response.status === 200) {
                     setToursInfo(response.data)
-                    console.log(response)
+                    // console.log(response)
                 }
             } catch (err) {
                 console.log('Ошибка', err)

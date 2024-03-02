@@ -3,12 +3,13 @@ import mainImage from '../../images/about/main.png';
 import button from '../../images/about/about_button.png';
 import './About.scss';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
     const handleBtn = () => {
         console.log(window.scroll(0, 500))
-    } 
+    }
 
     // const dispatch = useDispatch() 
 
@@ -17,8 +18,8 @@ const About = () => {
     // useEffect(() => {
     //     dispatch(getTours(state))
     // }, [state])
-    
-    
+
+
     return (
         <div className='about'>
             <div className="container">
@@ -33,12 +34,15 @@ const About = () => {
                             Enjoy the best experience with us!
                         </p>
                         <div className='about__button_container'
-                        onClick={handleBtn}
+                            onClick={handleBtn}
                         >
                             {/* <img src={button} alt="Button" className="about__button" /> */}
-                            <p className='about__button'>
-                                Let's start
-                            </p>
+                            <Link to="/tourDetailsPage">
+                                <p className='about__button'>
+                                    Let's start
+                                </p>
+
+                            </Link>
                             <div className='about__button_arrow'><HiOutlineArrowNarrowRight /></div>
 
                         </div>

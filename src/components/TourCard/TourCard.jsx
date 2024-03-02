@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import tourCardImg from '../../images/TourCard/TourCard__img.png'
 import tourCardImg2 from '../../images/TourCard/TourCard__img2.png'
@@ -7,11 +7,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './TourCard.scss'
-
+import axios from 'axios'
 
 
 
 const TourCard = () => {
+    const [tours, setTours] = useState([])
+
     const settings = {
         dots: false,
         infinite: true,
@@ -28,19 +30,41 @@ const TourCard = () => {
 
       };
 
-    const items = [
-        <Link to='/tourDetailsPage' key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
-        <Link to='/tourDetailsPage'  key="2"><img src={tourCardImg2} alt="Tour Image 2" /></Link>,
-        <Link to='/tourDetailsPage'  key="3"><img src={tourCardImg3} alt="Tour Image 2" /></Link>,
-        <Link to='/tourDetailsPage'  key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
-        <Link to='/tourDetailsPage'  key="2"><img src={tourCardImg2} alt="Tour Image 2" /></Link>,
-        <Link to='/tourDetailsPage'  key="3"><img src={tourCardImg3} alt="Tour Image 2" /></Link>,
+      useEffect(() => {
+        const fetchTours = async () => {
+            try {
+                const response = await axios.get('https://jsonplaceholder.typicode.com/photos/')
+
+                if(response.status === 200) {
+                    setTours(response.data)
+                    console.log(response.data)
+                } 
+            } catch (err) {
+                console.log('Ошибка', err)
+            }
+        }
+        fetchTours()
+    }, [])
+
+    // const items = [
+    //     <Link to='/tourDetailsPage' key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
+    //     <Link to='/tourDetailsPage'  key="2"><img src={tourCardImg2} alt="Tour Image 2" /></Link>,
+    //     <Link to='/tourDetailsPage'  key="3"><img src={tourCardImg3} alt="Tour Image 2" /></Link>,
+    //     <Link to='/tourDetailsPage'  key="1"><img src={tourCardImg} alt="Tour Image 1" /></Link>,
+    //     <Link to='/tourDetailsPage'  key="2"><img src={tourCardImg2} alt="Tour Image 2" /></Link>,
+    //     <Link to='/tourDetailsPage'  key="3"><img src={tourCardImg3} alt="Tour Image 2" /></Link>,
         
-    ]
+    // ]
     return (
         <>
             <Slider {...settings}>
-                {items}
+                {/* {items} */}
+                {tours.map((item, index) => {
+                    return <Link to="/tourDetailsPage" key={index}>
+                        <img src={item.thumbnailUrl} alt="IMG" />
+                    </Link>
+                })}
+
             </Slider>
         </>
 
