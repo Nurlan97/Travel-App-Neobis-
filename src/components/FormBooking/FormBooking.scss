@@ -1,0 +1,124 @@
+.formBooking {
+    &__title {
+        color: rgb(20, 20, 20);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 65px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        color:rgb(20, 20, 20)
+    }
+
+    &__commentsInput_container {
+        margin-top: 24px;
+    }
+
+    &__commentsInput_label {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        width: 100%;
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: rgb(136, 136, 136);
+        }
+    }
+
+
+    &__commentsInput {
+        width: 100%;
+        outline: none;
+        font-weight: 400;
+        font-size: 18px;
+        color: #888;
+
+    }
+
+    &__counterBlock_container {
+        margin-top: 24px;
+    }
+
+    &__counter_container {
+        display: flex;
+        gap: 22px;
+        margin-top: 4px;
+    }
+
+    &__counter_wrapper {
+        border-radius: 20px;
+        background: rgb(243, 243, 243);
+    }
+
+    &__counter_title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: rgb(136, 136, 136);
+    }
+
+    &__counter {
+        padding: 17px 10px;
+    }
+
+    &__counter_decrement,
+    &__counter_increment {
+        border-radius: 16px;
+        background: rgb(137, 124, 255);
+        // padding: 14px 11px;
+        width: 42px;
+        height: 48px;
+        border: none;
+        color: rgb(255, 255, 255);
+    }
+
+
+
+    &__counter_number_of_people_container {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &__counter_number_of_people {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__submit_btn {
+        margin-top: 48px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: left;
+        border-radius: 28px;
+        background: rgb(137, 124, 255);
+        color: rgb(255, 255, 255);
+        width: 100%;
+        padding: 13px 0;
+        text-align: center;
+
+        /* Inactive */
+        // background: rgb(180, 176, 218);
+    }
+
+
+}

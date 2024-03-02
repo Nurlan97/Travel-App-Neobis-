@@ -6,6 +6,7 @@ import user2 from '../../images/TourDetailsPage/user2.webp'
 import bg_img from '../../images/TourDetailsPage/tourDetailsPage_main-img.png'
 import FormBooking from '../FormBooking/FormBooking'
 import { useParams } from 'react-router-dom'
+import TourBookingModal from '../TourBookingModal'
 
 const TourDetails = () => {
 
@@ -88,7 +89,7 @@ const TourDetails = () => {
                         onClick={() => setModalInfoIsOpen(true)}
                     >Book now</button>
 
-                    <FormBooking 
+                    <TourBookingModal
                     isOpen={modalInfoIsOpen}
                     setIsOpen={setModalInfoIsOpen}
                     id={id}
