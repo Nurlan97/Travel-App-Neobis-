@@ -84,6 +84,10 @@
         height: 48px;
         border: none;
         color: rgb(255, 255, 255);
+
+        &:disabled {
+            background: rgb(180, 176, 218);
+        }
     }
 
 
@@ -117,8 +121,12 @@
         text-align: center;
         cursor: pointer;
 
-        /* Inactive */
-        // background: rgb(180, 176, 218);
+        &:disabled {
+            
+            /* Inactive */
+            background: rgb(180, 176, 218);
+        }
+
     }
 
 

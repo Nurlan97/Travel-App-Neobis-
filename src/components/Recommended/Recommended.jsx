@@ -9,17 +9,18 @@ const Recommended = () => {
     const [toursInfo, setToursInfo] = useState([])
 
     // const { id } = useParams()    
-    const [id, setId] = useState(1)
+    // const [id, setId] = useState(1)
 
     useEffect(() => {
         const fetchTours = async () => {
             try {
-                const response = await axios.get(`https://jsonplaceholder.typicode.com/photos/`)
-                // const response = await axios.get(`https://muha-backender.org.kg/tours/recommended/`)
+                // const response = await axios.get(`https://jsonplaceholder.typicode.com/photos/`)
+                const response = await axios.get(`https://muha-backender.org.kg/tours/recommended/`)
                 if (response.status === 200) {
-                    setToursInfo(response.data)
-                    // console.log(response)
-                }
+                    const keyTours = 'Recommended Tours'
+                    const data = response.data[keyTours]
+                    setToursInfo(data)
+                 }
             } catch (err) {
                 console.log('Ошибка', err)
             }
@@ -27,32 +28,27 @@ const Recommended = () => {
         fetchTours()
     }, [])
     // toursInfo.map(item => console.log(item.thumbnailUrl))
-
+      
     return (
         <section className='recommended'>
             <div className="container">
                 <h1 className="recommended__title">
                     Recommended
                 </h1>
-
-                {
-                    toursInfo &&
+                    
 
                     <div className="recommended__tours">
                         {
-                            toursInfo.slice(0,12).map(item => {
-                                console.log(item)
+                            toursInfo && toursInfo.map((item, index) => {
                                 return (
-                                    <Link to="/tourDetailsPage" className="recommended__tour-container">
-                                        <img src={item.thumbnailUrl} alt="" className="recommended__tour" />
+                                    <Link to="/tourDetailsPage" className="recommended__tour-container" key={index}>
+                                        <img src={item.image} alt="" className="recommended__tour" />
                                     </Link>
                                 )
                             })
                         }
 
                     </div>
-
-                }
 
 
             </div>

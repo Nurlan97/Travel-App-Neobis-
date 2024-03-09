@@ -37,7 +37,7 @@ const TourDetails = () => {
     return (
         <div className='tourDetails'>
 
-            
+
             <div
                 className="tourDetails__img"
                 style={{ backgroundImage: `url(${bg_img})` }}
@@ -70,7 +70,7 @@ const TourDetails = () => {
                             {users.map((user, index) => (
                                 <div key={index}>
                                     <div className="tourDetails__reviews_comment">
-                                    
+
                                         <img src={user.userImg} alt="logo" className="tourDetails__reviews_comment_userImg" />
                                         <p className="tourDetails__reviews_comment_userName">
                                             {user.userName}
@@ -90,11 +90,11 @@ const TourDetails = () => {
                     >Book now</button>
 
                     <TourBookingModal
-                    isOpen={modalInfoIsOpen}
-                    setIsOpen={setModalInfoIsOpen}
-                    id={id}
+                        isOpen={modalInfoIsOpen}
+                        setIsOpen={setModalInfoIsOpen}
+                        id={id}
                     />
-                    
+
 
                 </div>
 
