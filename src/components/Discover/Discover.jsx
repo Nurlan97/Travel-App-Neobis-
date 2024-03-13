@@ -38,7 +38,7 @@ const Discover = () => {
                     const keyTours = 'Category Tours';
                     const data = response.data[keyTours]
                     setTours(data)
-                    // console.log(response.data)
+                    // console.log(data[0].image)
                 }
             } catch (err) {
                 console.log('Ошибка', err)

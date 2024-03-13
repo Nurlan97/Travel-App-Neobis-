@@ -28,7 +28,7 @@ const Recommended = () => {
         fetchTours()
     }, [])
     // toursInfo.map(item => console.log(item.thumbnailUrl))
-      
+      console.log(toursInfo)
     return (
         <section className='recommended'>
             <div className="container">
@@ -41,7 +41,7 @@ const Recommended = () => {
                         {
                             toursInfo && toursInfo.map((item, index) => {
                                 return (
-                                    <Link to="/tourDetailsPage" className="recommended__tour-container" key={index}>
+                                    <Link to={`/tourDetailsPage/${item.id}`} className="recommended__tour-container" key={index}>
                                         <img src={item.image} alt="" className="recommended__tour" />
                                     </Link>
                                 )

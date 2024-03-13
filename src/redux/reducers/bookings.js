@@ -3,18 +3,21 @@ import axios from "axios";
 
 export const postBookings = createAsyncThunk(
     'postBookings',
-    async (data) => {
+    async (data, {rejectWithValue}) => {
         try {
-            const response = await axios.post('https://muha-backender.org.kg/tours/3/reservations', data)
+            // const response = await axios.post('https://muha-backender.org.kg/tours/3/reservations/', data)
+            const response = await axios.post(`https://muha-backender.org.kg/tours/${data.id}/reserve/`, data)
             
-            if (response.status === 200) {
+            console.log(response)
+            if (response.status === 201) {
                 return response.data
             } else {
                 throw new Error('Server Error')
             }
         } catch (error) {
             console.log(error.message)
-
+            return rejectWithValue(error.response.data)
+            
         }
     }
 )

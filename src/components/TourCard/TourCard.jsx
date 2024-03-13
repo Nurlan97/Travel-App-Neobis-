@@ -12,6 +12,7 @@ import axios from 'axios'
 
 
 const TourCard = ({ tour }) => {
+
     // const [tours, setTours] = useState([])
 
     
@@ -53,7 +54,7 @@ const TourCard = ({ tour }) => {
     return (
         <>
           
-                <Link to="/tourDetailsPage">
+                <Link to={`/tourDetailsPage/${tour.id}`}>
                     <img src={tour.image} alt="IMG" />
                 </Link>
            

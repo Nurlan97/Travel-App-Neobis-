@@ -16,8 +16,7 @@ const FormBooking = ({ id }) => {
 
     const [count, setCount] = useState(1);
     const [comment, setComment] = useState('')
-    const { status } = useSelector(state => state.bookingSlice)
-    console.log(status)
+    
 
     const isDisabledIncrement = count === 6
     const isDisabledDecrement = count === 1
@@ -34,12 +33,13 @@ const FormBooking = ({ id }) => {
 
         const newData = {
             id,
-            // tel,
-            comment,
-            count
+            phone_number: phoneNumber,
+            order_comment: comment,
+            people_num: count
         }
 
         dispatch(postBookings(newData))
+        
     }
 
     const handleCommentChange = (e) => {
