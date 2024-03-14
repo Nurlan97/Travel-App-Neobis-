@@ -5,18 +5,22 @@ import { postBookings } from '../../redux/reducers/bookings'
 import { isValidPhoneNumber } from 'react-phone-number-input'
 import './FormBooking.scss'
 import number_of_people_logo from '../../images/TourBooking/number_of_people.png'
+import TourBookingSuccessModal from '../TourBookingSuccessModal/TourBookingSuccessModal'
 
-const FormBooking = ({ id }) => {
+const FormBooking = ({ id, onClose, setActive }) => {
 
     const [phoneNumber, setPhoneNumber] = useState('');
     const isValidForm = isValidPhoneNumber(phoneNumber)
-    
+
+    // /////// Success!!!
+
+    // const [modalActive, setModalActive] = useState(false)
 
     const dispatch = useDispatch()
 
     const [count, setCount] = useState(1);
     const [comment, setComment] = useState('')
-    
+
 
     const isDisabledIncrement = count === 6
     const isDisabledDecrement = count === 1
@@ -39,6 +43,7 @@ const FormBooking = ({ id }) => {
         }
 
         dispatch(postBookings(newData))
+        onClose()
         
     }
 
@@ -97,7 +102,16 @@ const FormBooking = ({ id }) => {
                     </div>
                 </div>
 
-                <button type="submit" disabled={!isValidForm} className='formBooking__submit_btn'>Submit</button>
+                <button type="submit"
+                    disabled={!isValidForm} className='formBooking__submit_btn'
+                    onClick={() => setActive(true)}
+                >
+                    Submit
+                </button>
+                {/* <TourBookingSuccessModal
+                    active={modalActive}
+                    setActive={setModalActive}
+                /> */}
             </form>
 
         </>

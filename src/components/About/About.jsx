@@ -37,9 +37,9 @@ const About = () => {
                             onClick={handleBtn}
                         >
                             {/* <img src={button} alt="Button" className="about__button" /> */}
-                            <Link to="/tourDetailsPage">
+                            <Link to="/">
                                 <p className='about__button'>
-                                    Let's start
+                                    Let's Go!
                                 </p>
 
                             </Link>

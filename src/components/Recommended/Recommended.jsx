@@ -28,7 +28,7 @@ const Recommended = () => {
         fetchTours()
     }, [])
     // toursInfo.map(item => console.log(item.thumbnailUrl))
-      console.log(toursInfo)
+    
     return (
         <section className='recommended'>
             <div className="container">

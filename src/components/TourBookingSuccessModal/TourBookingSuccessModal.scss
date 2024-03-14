@@ -1,0 +1,61 @@
+.tourBookingSuccessModal {
+    height: 100%;
+    width: 100%;
+    background: rgba(37, 37, 37, 0.35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 3;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__content {
+        padding: 40px 56px 58px;
+        border-radius: 48px;
+        background: rgb(255, 255, 255);
+        transform: scale(0.5);
+        transition: 0.4s all;
+
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+
+        &.active {
+            transform: scale(1);
+        }
+
+        &_title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 54px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        &_btn {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0%;
+            text-align: left;
+            width: 100%;
+            border-radius: 100px;
+
+            /* Primary */
+            background: rgb(106, 98, 183);
+            padding: 13px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

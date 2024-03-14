@@ -4,13 +4,13 @@ import FormBooking from '../FormBooking'
 import { useSelector } from 'react-redux'
 
 
-const TourBookingModal = ({ isOpen, setIsOpen, id }) => {
+const TourBookingModal = ({ isOpen, setIsOpen, id, setActive }) => {
 
     const handleClose = () => {
         setIsOpen(false)
     }
 
-    const { status } = useSelector((state) => state.bookingSlice)
+    // const { status } = useSelector((state) => state.bookingSlice)
     
     return (
         <>
@@ -18,7 +18,11 @@ const TourBookingModal = ({ isOpen, setIsOpen, id }) => {
                 isOpen={isOpen}
                 onClose={handleClose}
             >
-                <FormBooking id={id} />
+                <FormBooking 
+                id={id} 
+                setActive={setActive}
+                onClose={handleClose}
+                />
 
             </TourBooking>
         </>

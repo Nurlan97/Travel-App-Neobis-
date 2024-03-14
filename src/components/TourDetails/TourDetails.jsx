@@ -7,19 +7,30 @@ import TourBookingModal from '../TourBookingModal'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTourById } from '../../redux/reducers/tour'
 import { getReviewsById } from '../../redux/reducers/reviews'
+import TourBookingSuccessModal from '../TourBookingSuccessModal/TourBookingSuccessModal'
+import GoBack from '../GoBack/GoBack'
 
 const TourDetails = () => {
     const dispatch = useDispatch()
     const { status, tour } = useSelector((state) => state.tourSlice)
-    
+
     const { review } = useSelector((state) => state.reviewSlice)
-    
+
     const { id } = useParams()
 
-    
+
 
     const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false)
 
+
+
+
+    /////// Success!!!
+
+    const [modalActive, setModalActive] = useState(false)
+
+    
+   
 
     useEffect(() => {
         window.scroll(0, 0)
@@ -29,9 +40,10 @@ const TourDetails = () => {
     }, [])
 
     const tourKey = 'Tour Info'
-    
+
     return (
         <div className='tourDetails'>
+            <GoBack/>
 
 
             <div
@@ -89,6 +101,13 @@ const TourDetails = () => {
                         isOpen={modalInfoIsOpen}
                         setIsOpen={setModalInfoIsOpen}
                         id={id}
+                        setActive={setModalActive}
+                        
+                    />
+                
+                    <TourBookingSuccessModal
+                        active={modalActive}
+                        setActive={setModalActive}
                     />
 
 

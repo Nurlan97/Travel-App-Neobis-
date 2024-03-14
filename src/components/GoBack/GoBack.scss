@@ -1,0 +1,28 @@
+.goBack {
+
+    display: block;
+    position: absolute;
+    top: 136px;
+    left: 188px;
+    border: none;
+    cursor: pointer;
+ 
+
+    &__wrapper {
+        border-radius: 50px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        background: rgb(106, 98, 183);
+        padding: 25px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: Satoshi;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+    }
+}
